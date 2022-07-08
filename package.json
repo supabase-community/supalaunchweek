@@ -4,7 +4,7 @@
   "private": true,
   "repository": "vercel/virtual-event-starter-kit",
   "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "homepage": "https://supalaunchweek.tv",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=12"

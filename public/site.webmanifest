@@ -1,7 +1,7 @@
 {
-  "name": "Virtual Event Starter Kit",
-  "short_name": "Virtual Event Starter Kit",
-  "description": "Virtual Event Starter Kit -> https://demo.vercel.events",
+  "name": "supalaunchweek.tv",
+  "short_name": "supalaunchweek",
+  "description": "Join the Supabase Launch Week LIVE!",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
