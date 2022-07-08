@@ -322,11 +322,11 @@ input {
 }
 
 .guest-badge {
-  border: 1px solid #8465cb;
+  border: 1px solid #34b27b;
 }
 
 .attendee-badge {
-  border: 1px solid #8465cb;
+  border: 1px solid #34b27b;
 }
 
 .tabs button[data-state='active'] {

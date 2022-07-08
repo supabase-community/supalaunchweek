@@ -220,7 +220,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
             )}
           </p>
         </div>
-        <div className={formStyles['or-divider']}>OR</div>
+        {/* <div className={formStyles['or-divider']}>OR</div>
         <a
           href="/stage/a"
           className={cn(
@@ -235,7 +235,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
             </span>
             Go to Live Stage
           </div>
-        </a>
+        </a> */}
       </div>
     </form>
   );
