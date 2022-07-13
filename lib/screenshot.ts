@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import playwright from 'playwright-chromium';
+import playwright from 'playwright-aws-lambda';
 
 export default async function screenshot(url: string) {
-  const browser = await playwright.chromium.launch();
+  const browser = await playwright.launchChromium();
   const context = await browser.newContext();
   const page = await context.newPage();
   page.setViewportSize({ width: 2000, height: 1000 });
