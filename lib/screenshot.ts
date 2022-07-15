@@ -18,11 +18,13 @@ import chrome from 'chrome-aws-lambda';
 import puppeteer from 'puppeteer-core';
 
 export default async function screenshot(url: string) {
+  console.log(process.platform);
   const options = process.env.AWS_REGION
     ? {
         args: chrome.args,
         executablePath: await chrome.executablePath,
-        headless: chrome.headless
+        headless: chrome.headless,
+        ignoreDefaultArgs: ['--disable-extensions']
       }
     : {
         args: [],
