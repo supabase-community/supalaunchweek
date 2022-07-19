@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-export const SITE_URL = 'https://supalaunchweek-tv-git-supalaunchweek-thorwebdev.vercel.app';
+export const SITE_URL = 'https://launchweek-landing.vercel.app';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'supabase';
 export const BRAND_NAME = 'Supabase';
