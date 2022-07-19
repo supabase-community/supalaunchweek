@@ -27,7 +27,7 @@ export default function TicketColored() {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M20 0C8.95431 0 0 8.95431 0 20V138C14.9117 138 27 150.088 27 165C27 179.912 14.9117 192 0 192V310C0 321.046 8.9543 330 20 330H630C641.046 330 650 321.046 650 310V192C635.088 192 623 179.912 623 165C623 150.088 635.088 138 650 138V20C650 8.95431 641.046 0 630 0H20Z"
-        fill="#6741D9"
+        fill="#3fcf8e"
       />
       <path
         fillRule="evenodd"

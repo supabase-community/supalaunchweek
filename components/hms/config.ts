@@ -18,7 +18,7 @@ export const hmsConfig = {
    * Turn off 100ms added things ->
    * Disable for removing Invite change role CTAs
    */
-  hmsIntegration: true,
+  hmsIntegration: false,
   /**
    * border color for audioLevel
    */
@@ -26,5 +26,5 @@ export const hmsConfig = {
   /**
    * setHmsWatermark
    */
-  setHmsWatermark: true
+  setHmsWatermark: false
 };

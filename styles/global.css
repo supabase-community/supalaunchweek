@@ -58,10 +58,10 @@
   --gray: #252729;
   --secondary-color: #8a8f98;
   --sidebar: #0e0e10;
-  --brand: #702ec2;
-  --brand-lighter: #d6ccee;
-  --brand-light: #8465cb;
-  --brand-dark: #472a84;
+  --brand: #34b27b;
+  --brand-lighter: #8ed2af;
+  --brand-light: #3fcf8e;
+  --brand-dark: #2b825b;
   --gray1: #222222;
   --error: #ea3323;
 
@@ -322,11 +322,11 @@ input {
 }
 
 .guest-badge {
-  border: 1px solid #8465cb;
+  border: 1px solid #34b27b;
 }
 
 .attendee-badge {
-  border: 1px solid #8465cb;
+  border: 1px solid #34b27b;
 }
 
 .tabs button[data-state='active'] {
