@@ -59,6 +59,7 @@ export default function Conf({
               name={userData.name}
               ticketNumber={userData.ticketNumber}
               sharePage={sharePage}
+              golden={userData.golden}
             />
           )}
         </ConfContainer>

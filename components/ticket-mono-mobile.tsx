@@ -19,7 +19,9 @@
 // - Change id to "mobile-..."
 // - Change url(#) to url(#mobile-)
 //   This is because if a page has two same IDs it will fail.
-export default function TicketMonoMobile() {
+export default function TicketMonoMobile({ golden = false }: { golden?: boolean }) {
+  const frameColor = golden ? '#F2C94C' : '#3fcf8e';
+
   return (
     <svg
       width="100%"
@@ -32,7 +34,7 @@ export default function TicketMonoMobile() {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M2.9193e-06 540C3.40212e-06 551.046 8.95431 560 20 560L138 560C138 545.088 150.088 533 165 533C179.912 533 192 545.088 192 560L310 560C321.046 560 330 551.046 330 540L330 20C330 8.95427 321.046 -1.40334e-05 310 -1.35505e-05L192 -8.39259e-06C192 14.9117 179.912 27 165 27C150.088 27 138 14.9117 138 -6.03217e-06L20 -8.74228e-07C8.95428 -3.91405e-07 -2.41646e-05 8.95428 -2.36041e-05 20L2.9193e-06 540Z"
-        fill="#252729"
+        fill={frameColor}
       />
       <path
         fillRule="evenodd"

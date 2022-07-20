@@ -17,6 +17,7 @@
 export default function IconLogo({
   backgroundColor = 'transparent',
   foregroundColor = 'var(--accents-1)',
+  golden = false,
   ...props
 }) {
   return (
@@ -49,8 +50,8 @@ export default function IconLogo({
           y2="71.8295"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#249361" />
-          <stop offset="1" stopColor="#3ECF8E" />
+          <stop stopColor={golden ? '#F2C94C' : '#249361'} />
+          <stop offset="1" stopColor={golden ? '#FFE69B' : '#3ECF8E'} />
         </linearGradient>
         <linearGradient
           id="paint1_linear"

@@ -93,6 +93,7 @@ export type ConfUser = {
   name?: string | null;
   username?: string | null;
   createdAt?: number | null;
+  golden?: boolean;
 };
 
 export type GitHubOAuthData =

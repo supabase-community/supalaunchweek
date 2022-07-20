@@ -43,6 +43,7 @@ export default function TicketImage() {
                 ? query.username.toString()
                 : undefined
             }
+            golden={query.golden ? true : false}
           />
         </div>
       </div>

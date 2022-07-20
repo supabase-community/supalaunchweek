@@ -60,7 +60,8 @@ export default function Form({ sharePage }: Props) {
             id: data.id,
             ticketNumber: data.ticketNumber,
             name: data.name,
-            username: data.username
+            username: data.username,
+            golden: data.golden ?? false
           };
 
           if (sharePage) {

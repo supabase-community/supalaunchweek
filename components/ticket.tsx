@@ -34,10 +34,11 @@ type Props = {
   username: UserData['username'];
   ticketNumber: UserData['ticketNumber'];
   name: UserData['name'];
+  golden: UserData['golden'];
   sharePage?: boolean;
 };
 
-export default function Ticket({ username, name, ticketNumber, sharePage }: Props) {
+export default function Ticket({ username, name, ticketNumber, sharePage, golden }: Props) {
   const ticketRef = useRef<HTMLDivElement>(null);
   const [ticketGenerationState, setTicketGenerationState] = useState<TicketGenerationState>(
     'default'
@@ -76,6 +77,10 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               ) : (
                 <>{SITE_NAME}</>
               )
+            ) : golden ? (
+              <>
+                You won a golden ticket! <br /> Claim it now!
+              </>
             ) : (
               <>
                 You're in. <br /> Make it unique.
@@ -87,6 +92,8 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               <>
                 Join {name ?? 'them'} on {DATE}.
               </>
+            ) : golden ? (
+              <>Claim your ticket with GitHub and Tweet it to redeem your swag pack!</>
             ) : (
               <>
                 Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
@@ -116,6 +123,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
             name={name}
             ticketNumber={ticketNumber}
             ticketGenerationState={ticketGenerationState}
+            golden={golden}
           />
         </div>
         {!sharePage && (

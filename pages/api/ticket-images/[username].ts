@@ -27,6 +27,7 @@ export default async function ticketImages(req: NextApiRequest, res: NextApiResp
   if (username) {
     const usernameString = username.toString();
     const user = await getUserByUsername(usernameString);
+    const GOLDEN_TICKETS = (process.env.GOLDEN_TICKETS?.split(',') ?? []).map(n => Number(n));
     name = user.name;
     ticketNumber = user.ticketNumber;
     url = `${SITE_URL}/ticket-image?username=${encodeURIComponent(
@@ -34,6 +35,9 @@ export default async function ticketImages(req: NextApiRequest, res: NextApiResp
     )}&ticketNumber=${encodeURIComponent(ticketNumber ?? SAMPLE_TICKET_NUMBER)}`;
     if (name) {
       url = `${url}&name=${encodeURIComponent(name)}`;
+    }
+    if (GOLDEN_TICKETS.includes(ticketNumber ?? SAMPLE_TICKET_NUMBER)) {
+      url = `${url}&golden=1`;
     }
 
     const file = await screenshot(url);
