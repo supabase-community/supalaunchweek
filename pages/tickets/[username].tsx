@@ -29,9 +29,16 @@ type Props = {
   usernameFromParams: string | null;
   name: string | null;
   ticketNumber: number | null;
+  golden: boolean;
 };
 
-export default function TicketShare({ username, ticketNumber, name, usernameFromParams }: Props) {
+export default function TicketShare({
+  username,
+  ticketNumber,
+  name,
+  usernameFromParams,
+  golden
+}: Props) {
   if (!ticketNumber) {
     return <Error statusCode={404} />;
   }
@@ -60,7 +67,8 @@ export default function TicketShare({ username, ticketNumber, name, usernameFrom
         defaultUserData={{
           username: username || undefined,
           name: name || '',
-          ticketNumber
+          ticketNumber,
+          golden
         }}
         sharePage
       />
@@ -72,6 +80,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const username = params?.username?.toString() || null;
   let name: string | null | undefined;
   let ticketNumber: number | null | undefined;
+  const GOLDEN_TICKETS = (process.env.GOLDEN_TICKETS?.split(',') ?? []).map(n => Number(n));
 
   if (username) {
     const user = await getUserByUsername(username);
@@ -83,7 +92,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
       username: ticketNumber ? username : null,
       usernameFromParams: username || null,
       name: ticketNumber ? name || username || null : null,
-      ticketNumber: ticketNumber || SAMPLE_TICKET_NUMBER
+      ticketNumber: ticketNumber || SAMPLE_TICKET_NUMBER,
+      golden: GOLDEN_TICKETS.includes(ticketNumber ?? SAMPLE_TICKET_NUMBER)
     },
     revalidate: 5
   };
