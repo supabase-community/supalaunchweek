@@ -23,6 +23,7 @@ export type UserData = {
   ticketNumber?: number;
   username?: string;
   name?: string;
+  golden?: boolean;
 };
 
 type ConfDataContextType = {

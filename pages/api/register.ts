@@ -75,6 +75,7 @@ export default async function register(
   let statusCode = 200;
   let name: string | null | undefined = undefined;
   let username: string | null | undefined = undefined;
+  const GOLDEN_TICKETS = (process.env.GOLDEN_TICKETS?.split(',') ?? []).map(n => Number(n));
 
   id = emailToId(email);
   const existingTicketNumberString = await getTicketNumberByUserId(id);
@@ -111,6 +112,7 @@ export default async function register(
     ticketNumber,
     createdAt,
     name,
-    username
+    username,
+    golden: GOLDEN_TICKETS.includes(ticketNumber)
   });
 }

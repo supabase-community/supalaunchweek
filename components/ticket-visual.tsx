@@ -30,6 +30,7 @@ type Props = {
   ticketNumber?: number;
   username?: string;
   ticketGenerationState?: TicketGenerationState;
+  golden?: boolean;
 };
 
 export default function TicketVisual({
@@ -37,16 +38,21 @@ export default function TicketVisual({
   name,
   username,
   ticketNumber,
-  ticketGenerationState = 'default'
+  ticketGenerationState = 'default',
+  golden = false
 }: Props) {
   return (
     <>
       <div className={styles.visual} style={{ ['--size' as string]: size }}>
         <div className={styles['horizontal-ticket']}>
-          {username ? <TicketColored /> : <TicketMono />}
+          {username ? <TicketColored golden={golden} /> : <TicketMono golden={golden} />}
         </div>
         <div className={styles['vertical-ticket']}>
-          {username ? <TicketColoredMobile /> : <TicketMonoMobile />}
+          {username ? (
+            <TicketColoredMobile golden={golden} />
+          ) : (
+            <TicketMonoMobile golden={golden} />
+          )}
         </div>
         <div className={styles.profile}>
           <TicketProfile
@@ -57,7 +63,12 @@ export default function TicketVisual({
           />
         </div>
         <div className={styles.info}>
-          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : undefined} />
+          <TicketInfo
+            golden={golden}
+            logoTextSecondaryColor={
+              ticketNumber ? (golden ? '#F2C94C' : 'var(--brand)') : undefined
+            }
+          />
         </div>
         {ticketNumber && (
           <div className={styles['ticket-number-wrapper']}>
