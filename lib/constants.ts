@@ -25,7 +25,8 @@ export const SITE_DESCRIPTION = 'Join the Supabase Launch Week LIVE!';
 export const DATE = '15 August 2022';
 export const SHORT_DATE = 'Aug 15 - 9:00am PT';
 export const FULL_DATE = 'Aug 15th 9am Pacific Time (GMT-7)';
-export const TWEET_TEXT = META_DESCRIPTION;
+export const TWEET_TEXT = 'Got my ticket for #SupaLaunchWeek 5!';
+export const TWEET_TEXT_GOLDEN = `Woop! I got a Golden Ticket for #SupaLaunchWeek 5! SupaSwag on its way!`;
 export const COOKIE = 'user-id';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
