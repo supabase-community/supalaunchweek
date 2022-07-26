@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <div className={styles.wrapper}>
       <img
-        src="/idea-2-lockup-hires.png"
+        src="/idea-2-lockup-hires.jpg"
         className={cn(
           styleUtils.appear,
           styleUtils['appear-third'],
