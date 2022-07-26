@@ -54,6 +54,9 @@ export default function TicketVisual({
             <TicketMonoMobile golden={golden} />
           )}
         </div>
+        <div className={styles.logo}>
+          <img src="/supabase-launch-week-5-logo.png" />
+        </div>
         <div className={styles.profile}>
           <TicketProfile
             name={name}

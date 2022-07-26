@@ -16,6 +16,16 @@
 
 .wrapper {
   margin-top: var(--space-12x);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.heroImage {
+  display: flex;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -28,22 +38,23 @@
 }
 
 .info {
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.4;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: var(--space-8x);
-  color: var(--brand);
+  display: flex;
+  gap: 16px;
+  color: var(--secondary-color);
 }
 
 .description {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.4;
   text-align: center;
-  margin: auto auto 30px;
+  
   color: var(--secondary-color);
   max-width: 355px;
 }
@@ -60,21 +71,32 @@
 }
 
 @media (min-width: 768px) {
+
+  .heroImage {
+    max-width: 580px;
+  }
+
   .hero {
-    font-size: 100px;
+    font-size: 30px;
     line-height: 1;
     font-weight: 800;
     margin: 0 0px 40px;
   }
 
   .info {
-    font-size: 24px;
-    margin-bottom: 80px;
+    font-size: 21px;
   }
 
   .description {
-    font-size: var(--space-8x);
+    font-size: 21px;
     max-width: 531px;
     margin: 40px auto;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  .heroImage {
+    max-width: 720px;
   }
 }

@@ -50,7 +50,8 @@ export default function Layout({
   return (
     <>
       <div className={styles.background}>
-        {!hideNav && (
+        {false && (
+          // !hideNav
           <header className={cn(styles.header)}>
             <div className={styles['header-logos']}>
               <MobileMenu key={router.asPath} />

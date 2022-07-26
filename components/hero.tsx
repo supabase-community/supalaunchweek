@@ -18,41 +18,45 @@ import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
 import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+import Logo from './logo';
 
 export default function Hero() {
   return (
     <div className={styles.wrapper}>
-      <h2
+      <img
+        src="/idea-2-lockup-hires.png"
         className={cn(
           styleUtils.appear,
           styleUtils['appear-third'],
-          styleUtils['show-on-mobile'],
-          styles.description
+          styleUtils['show-on-desktop'],
+          styles.heroImage
         )}
-      >
-        {SITE_DESCRIPTION}
-      </h2>
-      <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
+      />
+      <Logo
+        className={[
+          styleUtils.appear,
+          styleUtils['appear-fourth'],
+          styleUtils['show-on-desktop']
+        ].join(' ')}
+      />
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
+        {/* <h1 className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.hero)}>
         Welcome to the
-        <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME} Launch Week!
-      </h1>
-      <h2
+        {BRAND_NAME} Launch Week!
+      </h1> */}
+        <p>August 15</p>
+        <p>17:00 PT | 20:00 ET</p>
+      </div>
+      {/* <h2
         className={cn(
           styleUtils.appear,
-          styleUtils['appear-third'],
+          styleUtils['appear-fourth'],
           styleUtils['show-on-tablet'],
           styles.description
         )}
       >
         {SITE_DESCRIPTION}
-      </h2>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
-        <p>{DATE}</p>
-        <div className={styles['description-separator']} />
-        <p>
-          <strong>Online</strong>
-        </p>
-      </div>
+      </h2> */}
     </div>
   );
 }

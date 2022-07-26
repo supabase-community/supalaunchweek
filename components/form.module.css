@@ -23,6 +23,25 @@
   gap: 12px;
 }
 
+.formInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  max-width: 520px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+}
+
+.formInfo h3 {
+  font-size: 1.25em;
+}
+
+.formInfo p {
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
 @media (min-width: 1200px) {
   .form.share-page {
     justify-content: flex-start;

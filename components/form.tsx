@@ -132,65 +132,76 @@ export default function Form({ sharePage }: Props) {
 
   useEmailQueryParam('email', setEmail);
 
-  return formState === 'error' ? (
-    <div
-      className={cn(styles.form, {
-        [styles['share-page']]: sharePage
-      })}
-    >
-      <div className={styles['form-row']}>
-        <div className={cn(styles['input-label'], styles.error)}>
-          <div className={cn(styles.input, styles['input-text'])}>{errorMsg}</div>
-          <button
-            type="button"
-            className={cn(styles.submit, styles.register, styles.error)}
-            onClick={onTryAgainClick}
-          >
-            Try Again
-          </button>
-        </div>
+  return (
+    <>
+      <div className={styles.formInfo}>
+        <h3>Get a ticket</h3>
+        <p>
+          A few of the lucky attendees will get a limited edition Supabase goodie bag. Make sure you
+          don’t skip your chance.
+        </p>
       </div>
-    </div>
-  ) : (
-    <form
-      className={cn(styles.form, {
-        [styles['share-page']]: sharePage,
-        [styleUtils.appear]: !errorTryAgain,
-        [styleUtils['appear-fifth']]: !errorTryAgain && !sharePage,
-        [styleUtils['appear-third']]: !errorTryAgain && sharePage
-      })}
-      onSubmit={onSubmit}
-    >
-      <div className={styles['form-row']}>
-        <label
-          htmlFor="email-input-field"
-          className={cn(styles['input-label'], {
-            [styles.focused]: focused
+      {formState === 'error' ? (
+        <div
+          className={cn(styles.form, {
+            [styles['share-page']]: sharePage
           })}
         >
-          <input
-            className={styles.input}
-            autoComplete="off"
-            type="email"
-            id="email-input-field"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            onFocus={() => setFocused(true)}
-            onBlur={() => setFocused(false)}
-            placeholder="Enter email to register free"
-            aria-label="Your email address"
-            required
-          />
-        </label>
-        <button
-          type="submit"
-          className={cn(styles.submit, styles.register, styles[formState])}
-          disabled={formState === 'loading'}
+          <div className={styles['form-row']}>
+            <div className={cn(styles['input-label'], styles.error)}>
+              <div className={cn(styles.input, styles['input-text'])}>{errorMsg}</div>
+              <button
+                type="button"
+                className={cn(styles.submit, styles.register, styles.error)}
+                onClick={onTryAgainClick}
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <form
+          className={cn(styles.form, {
+            [styles['share-page']]: sharePage,
+            [styleUtils.appear]: !errorTryAgain,
+            [styleUtils['appear-fifth']]: !errorTryAgain && !sharePage,
+            [styleUtils['appear-third']]: !errorTryAgain && sharePage
+          })}
+          onSubmit={onSubmit}
         >
-          {formState === 'loading' ? <LoadingDots size={4} /> : <>Register</>}
-        </button>
-      </div>
-      <Captcha ref={captchaRef} onVerify={handleRegister} />
-    </form>
+          <div className={styles['form-row']}>
+            <label
+              htmlFor="email-input-field"
+              className={cn(styles['input-label'], {
+                [styles.focused]: focused
+              })}
+            >
+              <input
+                className={styles.input}
+                autoComplete="off"
+                type="email"
+                id="email-input-field"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                onFocus={() => setFocused(true)}
+                onBlur={() => setFocused(false)}
+                placeholder="Enter email to register free"
+                aria-label="Your email address"
+                required
+              />
+            </label>
+            <button
+              type="submit"
+              className={cn(styles.submit, styles.register, styles[formState])}
+              disabled={formState === 'loading'}
+            >
+              {formState === 'loading' ? <LoadingDots size={4} /> : <>Register</>}
+            </button>
+          </div>
+          <Captcha ref={captchaRef} onVerify={handleRegister} />
+        </form>
+      )}
+    </>
   );
 }

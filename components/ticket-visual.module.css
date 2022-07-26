@@ -17,6 +17,9 @@
 .visual {
   position: relative;
   transform: translateZ(0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .horizontal-ticket {
@@ -37,10 +40,35 @@
   }
 }
 
-.profile {
+.logo {
   z-index: 1;
   position: absolute;
   top: 0;
+  width: 100%;
+  height: 100%;
+  /* padding: 46px 29px;/ */
+}
+
+.logo img {
+  margin-top: 64px;
+  margin-left: 32px;
+  width: 272px;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    margin-top: 32px;
+    width: 280px;
+    margin-left: 160px;
+  }
+}
+
+
+
+.profile {
+  z-index: 1;
+  position: absolute;
+  top: 90px;
   width: 100%;
   height: 100%;
   padding: 46px 29px;
@@ -48,6 +76,7 @@
 
 @media (min-width: 768px) {
   .profile {
+    top: 48px;
     padding: calc(44px * var(--size)) calc(160px * var(--size)) calc(44px * var(--size))
       calc(63px * var(--size));
   }
@@ -56,17 +85,20 @@
 .info {
   z-index: 1;
   position: absolute;
-  top: calc(120px * var(--size));
+  bottom: 0;
   width: 100%;
   height: 100%;
-  padding: calc(46px * var(--size)) calc(29px * var(--size));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* padding: calc(46px * var(--size)) calc(29px * var(--size)); */
 }
 
 @media (min-width: 768px) {
   .info {
-    top: calc(140px * var(--size));
-    padding: calc(44px * var(--size)) calc(160px * var(--size)) calc(44px * var(--size))
-      calc(63px * var(--size));
+    bottom: 0;
+    /* padding: 0 calc(160px * var(--size)) calc(44px * var(--size))
+      calc(63px * var(--size)); */
   }
 }
 

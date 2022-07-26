@@ -15,7 +15,7 @@
  */
 
 .background {
-  background: #000;
+  background: #1C1C1C;
   color: #fff;
   min-height: 100vh;
   min-height: var(--100vh);

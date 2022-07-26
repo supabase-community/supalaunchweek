@@ -17,6 +17,8 @@
 .logo {
   display: flex;
   align-items: center;
+  /* justify-content: center; */
+  gap: 8px;
 }
 
 .icon {
@@ -34,4 +36,36 @@
 
 .text-secondary {
   color: var(--color);
+}
+
+.supabase {
+  font-family: "Supabase Sans", sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--color);
+}
+
+.launchweek {
+  font-family: "Launchweek", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 4px;
+  font-weight: normal;
+  color: var(--color);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: azure;
+  border-radius: 4px;
+}
+
+.number span {
+  
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
 }

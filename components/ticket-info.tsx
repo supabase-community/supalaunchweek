@@ -37,12 +37,11 @@ export default function TicketInfo({
   );
   return (
     <div className={styles.info}>
-      <div className={styles.logo}>
+      {/* <div className={styles.logo}>
         <Logo textSecondaryColor={logoTextSecondaryColor} golden={golden} />
-      </div>
+      </div> */}
       <div className={styles.date}>
         <div>{DATE}</div>
-        <div>ONLINE</div>
       </div>
       {/* <div className={styleUtils['hide-on-mobile']}>{createdBy}</div> */}
       <div className={styles.url}>{siteUrlForTicket}</div>
