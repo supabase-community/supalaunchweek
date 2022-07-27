@@ -30,9 +30,10 @@ type FormState = 'default' | 'loading' | 'error';
 
 type Props = {
   sharePage?: boolean;
+  align?: 'Left' | 'Center';
 };
 
-export default function Form({ sharePage }: Props) {
+export default function Form({ sharePage, align = 'Center' }: Props) {
   const [email, setEmail] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [errorTryAgain, setErrorTryAgain] = useState(false);
@@ -134,7 +135,7 @@ export default function Form({ sharePage }: Props) {
 
   return (
     <>
-      <div className={styles.formInfo}>
+      <div className={[styles.formInfo, styles[`formInfo${align}`]].join(' ')}>
         <h3>Get a ticket</h3>
         <p>
           A few of the lucky attendees will get a limited edition Supabase goodie bag. Make sure you
@@ -162,7 +163,7 @@ export default function Form({ sharePage }: Props) {
         </div>
       ) : (
         <form
-          className={cn(styles.form, {
+          className={cn(styles.form, styles[`form${align}`], {
             [styles['share-page']]: sharePage,
             [styleUtils.appear]: !errorTryAgain,
             [styleUtils['appear-fifth']]: !errorTryAgain && !sharePage,

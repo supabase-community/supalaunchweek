@@ -50,6 +50,7 @@ export default function Layout({
   return (
     <>
       <div className={styles.background}>
+        <div className={styles.gradientBg}></div>
         {false && (
           // !hideNav
           <header className={cn(styles.header)}>

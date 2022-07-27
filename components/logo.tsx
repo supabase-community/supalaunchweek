@@ -14,43 +14,6 @@
  * limitations under the License.
  */
 
-import cn from 'classnames';
-// import IconLogo from './icons/icon-logo';
-import styles from './logo.module.css';
-
-export default function Logo({
-  textSecondaryColor = 'var(--accents-5)',
-  golden = false,
-  className = ''
-}) {
-  return (
-    // <div className={styles.logo}>
-    //   <div className={styles.icon}>
-    //     <IconLogo backgroundColor="var(--accents-1)" foregroundColor="black" golden={golden} />
-    //   </div>
-    //   <div className={styles.text}>
-    //     <div>{SITE_NAME_MULTILINE[0]}</div>
-    //     <div
-    //       style={{ ['--color' as string]: textSecondaryColor }}
-    //       className={styles['text-secondary']}
-    //     >
-    //       {SITE_NAME_MULTILINE[1]}
-    //     </div>
-    //   </div>
-    // </div>
-    <div className={cn(className, styles.logo)}>
-      {/* <div className={styles.icon}>
-        <IconLogo backgroundColor="var(--accents-1)" foregroundColor="black" golden={golden} />
-      </div> */}
-      <div className={styles.supabase}>
-        <div>supabase</div>
-      </div>
-      <div className={styles.launchweek}>
-        <div>LAUNCHWEEK</div>
-      </div>
-      <div className={styles.number}>
-        <span>5</span>
-      </div>
-    </div>
-  );
+export default function Logo({ golden = false }) {
+  return <img src="/supabase-launch-week-5.svg" style={{ width: '100%' }} />;
 }

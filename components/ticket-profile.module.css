@@ -47,7 +47,7 @@
 .name {
   font-size: 24px;
   display: inline-block;
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0;

@@ -21,6 +21,24 @@
   min-height: var(--100vh);
   display: flex;
   flex-direction: column;
+  /* z-index: ; */
+}
+
+.gradientBg {
+  background-image: url("/supabase-launch-week-5-bg.jpg");
+  background-color: #1C1C1C;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+  background-position: bottom;
+  background-position-y: -520px;
+  background-size: 1929px 1170px;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 100%;
+  z-index: 0;
 }
 
 .page {
@@ -28,6 +46,8 @@
   flex-direction: column;
   width: 100%;
   flex: 1;
+
+  z-index: 10;
 }
 
 .main {

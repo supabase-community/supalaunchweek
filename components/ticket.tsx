@@ -109,7 +109,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage, golden
               setTicketGenerationState={setTicketGenerationState}
             />
           ) : (
-            <Form sharePage />
+            <Form sharePage align="Left" />
           )}
         </div>
       </div>

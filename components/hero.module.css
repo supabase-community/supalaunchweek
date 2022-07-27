@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 128px;
 }
 
 .heroImage {
@@ -35,6 +35,28 @@
   font-weight: 700;
   text-align: center;
   margin: 0 0 25px;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 380px;
+}
+
+.number {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.number img {
+  max-width: 64px;
 }
 
 .info {

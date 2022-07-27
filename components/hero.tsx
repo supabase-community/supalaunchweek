@@ -23,7 +23,7 @@ import Logo from './logo';
 export default function Hero() {
   return (
     <div className={styles.wrapper}>
-      <img
+      {/* <img
         src="/idea-2-lockup-hires.jpg"
         className={cn(
           styleUtils.appear,
@@ -31,15 +31,14 @@ export default function Hero() {
           styleUtils['show-on-desktop'],
           styles.heroImage
         )}
-      />
-      <Logo
-        className={[
-          styleUtils.appear,
-          styleUtils['appear-fourth'],
-          styleUtils['show-on-desktop']
-        ].join(' ')}
-      />
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
+      /> */}
+      <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.number)}>
+        <img src="/5-number.svg" style={{ width: '100%' }} />
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.logo)}>
+        <img src="/supabase-launch-week.svg" style={{ width: '100%' }} />
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.info)}>
         {/* <h1 className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.hero)}>
         Welcome to the
         {BRAND_NAME} Launch Week!
