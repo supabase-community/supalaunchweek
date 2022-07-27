@@ -85,8 +85,10 @@
 } */
 
 .url {
-  color: var(--accents-4);
   margin-bottom: var(--space-12x);
+  font-size: calc(20px * var(--size));
+  line-height: 1.15;
+  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
