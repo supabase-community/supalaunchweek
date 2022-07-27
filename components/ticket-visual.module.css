@@ -50,16 +50,20 @@
 }
 
 .logo img {
-  margin-top: 64px;
-  margin-left: 32px;
-  width: 272px;
+  /* margin-top: 64px; */
+  margin-top: calc( 64px * var(--size));
+  margin-left: calc( 32px * var(--size));
+  margin-left: calc( 32px * var(--size));
+  /* width: 272px; */
+  width: calc(272px * var(--size))
 }
 
 @media (min-width: 768px) {
   .logo img {
-    margin-top: 32px;
-    width: 280px;
-    margin-left: 160px;
+    margin-top: calc( 32px * var(--size));
+    /* width: 280px; */
+    width: calc(280px * var(--size));
+    margin-left:calc( 160px * var(--size));
   }
 }
 
@@ -76,7 +80,7 @@
 
 @media (min-width: 768px) {
   .profile {
-    top: 48px;
+    top: calc(48px * var(--size));
     padding: calc(44px * var(--size)) calc(160px * var(--size)) calc(44px * var(--size))
       calc(63px * var(--size));
   }

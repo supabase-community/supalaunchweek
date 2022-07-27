@@ -28,10 +28,10 @@
     grid-template-columns: 1fr 2fr;
     gap: calc(var(--space-4x) * var(--size));
     font-size: calc(1em * var(--size)); */
-    gap: 8px;
+    gap: calc(8px * var(--size));
     padding: 0;
-    margin-bottom: 32px;
-    margin-left: 160px;
+    margin-bottom: calc(32px * var(--size));
+    margin-left: calc(160px * var(--size));
   }
 }
 
