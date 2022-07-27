@@ -70,21 +70,21 @@
 .ticket-visual {
   position: relative;
   border-radius: var(--space-4x);
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 330px;
   margin: 0 auto;
 }
 
 .ticket-visual:before,
 .ticket-visual:after {
-  content: '';
+  /* content: '';
   display: block;
   width: 72px;
-  height: 58px;
-  background-color: #1C1C1C;
-  position: absolute;
+  height: 58px; */
+  /* background-color: #1C1C1C; */
+  /* position: absolute;
   z-index: 100;
-  border-radius: 50%;
+  border-radius: 50%; */
 }
 
 .ticket-visual:before {

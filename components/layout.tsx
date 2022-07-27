@@ -16,6 +16,7 @@
 
 import Link from 'next/link';
 import cn from 'classnames';
+import styleUtils from './utils.module.css';
 import { useRouter } from 'next/router';
 import { SkipNavContent } from '@reach/skip-nav';
 import { NAVIGATION } from '@lib/constants';
@@ -50,7 +51,7 @@ export default function Layout({
   return (
     <>
       <div className={styles.background}>
-        <div className={styles.gradientBg}></div>
+        <div className={cn(styleUtils.appear, styleUtils['appear-first'], styles.gradientBg)}></div>
         {false && (
           // !hideNav
           <header className={cn(styles.header)}>

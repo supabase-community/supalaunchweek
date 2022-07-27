@@ -43,7 +43,10 @@ export default function TicketVisual({
 }: Props) {
   return (
     <>
-      <div className={styles.visual} style={{ ['--size' as string]: size }}>
+      <div
+        className={[styles.visual, styles['visual--gold']].join(' ')}
+        style={{ ['--size' as string]: size }}
+      >
         <div className={styles['horizontal-ticket']}>
           {username ? <TicketColored golden={golden} /> : <TicketMono golden={golden} />}
         </div>
