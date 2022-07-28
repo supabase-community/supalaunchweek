@@ -132,7 +132,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage, golden
             {username ? (
               <div>
                 <div className={styles['ticket-actions']}>
-                  <TicketActions username={username} />
+                  <TicketActions username={username} golden={golden} />
                 </div>
                 <div className={styles['ticket-copy']}>
                   <TicketCopy username={username} />
