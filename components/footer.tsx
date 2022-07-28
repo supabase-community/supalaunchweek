@@ -21,15 +21,16 @@ import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@
 
 export function HostedByVercel() {
   return (
-    <a
-      href="https://vercel.com"
-      className={cn(styles['footer-link'], styles['footer-logo'])}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <div className={styles['secondary-text']}>Created by </div>
-      <VercelLogo color="white" />
-    </a>
+    // <a
+    //   href="https://vercel.com"
+    //   className={cn(styles['footer-link'], styles['footer-logo'])}
+    //   target="_blank"
+    //   rel="noopener noreferrer"
+    // >
+    //   <div className={styles['secondary-text']}>Created by </div>
+    //   <VercelLogo color="white" />
+    // </a>
+    <></>
   );
 }
 
@@ -46,7 +47,7 @@ export default function Footer() {
           rights reserved.
         </div>
         <div className={styles['footer-center-group']}>
-          <p className={styles['footer-paragraph']}>
+          {/* <p className={styles['footer-paragraph']}>
             <a
               href={REPO}
               className={styles['footer-link']}
@@ -66,7 +67,7 @@ export default function Footer() {
             >
               Code of Conduct
             </a>
-          </p>
+          </p> */}
           {LEGAL_URL && (
             <>
               <div className={styles['footer-separator']} />
