@@ -1,7 +1,7 @@
 {
   "functions": {
-    "src/pages/api/ticket-images/*.ts": {
-      "memory": 1024,
+    "api/*.ts": {
+      "memory": 3008,
       "maxDuration": 10
     }
   }
