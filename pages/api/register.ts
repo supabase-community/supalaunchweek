@@ -101,7 +101,7 @@ export default async function register(
       httpOnly: true,
       sameSite: 'strict',
       secure: process.env.NODE_ENV === 'production',
-      path: '/api',
+      path: '/launch-week/api',
       expires: new Date(Date.now() + ms('7 days'))
     })
   );
