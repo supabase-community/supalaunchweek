@@ -10,7 +10,7 @@
     "node": "^14"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3008",
     "start": "next start",
     "build": "next build",
     "license": "addlicense -l apache -c 'Vercel Inc.' components/**/* lib/**/* pages/**/* styles/**/* *.ts *.js"
