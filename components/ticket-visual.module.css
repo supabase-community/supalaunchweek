@@ -139,7 +139,7 @@
 
 .ticket-number-wrapper {
   position: absolute;
-  bottom: 55px;
+  bottom: 40px;
   right: 0;
 }
 
@@ -158,7 +158,7 @@
 }
 
 .ticket-number-golden {
-  color: var(--gold-secondary);
+  color: var(--gold-primary);
 }
 
 
@@ -166,5 +166,9 @@
   .ticket-number {
     transform: rotate(90deg) translateY(calc(100px * var(--size)));
     transform-origin: bottom right;
+  }
+
+  .ticket-number-golden {
+    color: var(--gold-accent);
   }
 }

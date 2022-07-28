@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   gap: 0px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   padding: 32px;
  }
 
@@ -50,8 +50,8 @@
 
 .date {
   /* text-transform: uppercase; */
-  font-size: calc(20px * var(--size));
-  line-height: 1.15;
+  font-size: calc(18px * var(--size));
+  
   color: var(--secondary-color); 
 }
 
@@ -62,6 +62,8 @@
 @media (min-width: 768px) {
   .date {
     margin-bottom: 0;
+    line-height: 1.15;
+    font-size: calc(20px * var(--size));
   }
 }
 
@@ -89,8 +91,8 @@
 
 .url {
   margin-bottom: var(--space-12x);
-  font-size: calc(20px * var(--size));
-  line-height: 1.15;
+  font-size: calc(18px * var(--size));
+  
   color: var(--secondary-color);
 }
 
@@ -101,5 +103,7 @@
 @media (min-width: 768px) {
   .url {
     margin-bottom: 0;
+    font-size: calc(20px * var(--size));
+    line-height: 1.15;
   }
 }

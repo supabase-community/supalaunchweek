@@ -55,11 +55,12 @@ export default function TicketVisual({
           <TicketMono golden={golden} />
         </div>
         <div className={styles['vertical-ticket']}>
-          {username ? (
+          {/* {username ? (
             <TicketColoredMobile golden={golden} />
           ) : (
             <TicketMonoMobile golden={golden} />
-          )}
+          )} */}
+          <TicketMonoMobile golden={golden} />
         </div>
         <div className={styles.logo}>
           <img

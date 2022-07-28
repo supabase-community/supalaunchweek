@@ -73,7 +73,10 @@ export default function TicketProfile({
             })}
           >
             <span className={cn(styles.githubIcon, { [styles['githubIcon-golden']]: golden })}>
-              <GithubIcon color="var(--secondary-color)" size={20 * size} />
+              <GithubIcon
+                color={golden ? 'var(--gold-primary)' : 'var(--secondary-color)'}
+                size={20 * size}
+              />
             </span>
             {username || <>username</>}
           </span>
