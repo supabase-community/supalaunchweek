@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/ticket-images/[username].ts": {
+    "pages/api/ticket-images/[username].ts": {
       "memory": 3008,
       "maxDuration": 10
     }
