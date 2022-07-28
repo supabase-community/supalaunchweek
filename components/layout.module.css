@@ -33,11 +33,17 @@
   margin: 0 auto;
   height: 100%;
   background-position: bottom;
-  background-position-y: -520px;
+  background-position-y: -920px;
   background-size: 1929px 1170px;
   background-repeat: no-repeat;
   position: absolute;
   z-index: 0;
+}
+
+@media screen and (min-width: 1032px) {
+  .gradientBg {
+    background-position-y: -820px;
+  }
 }
 
 .page {

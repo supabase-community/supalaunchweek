@@ -45,7 +45,13 @@
 }
 
 .logo img {
-  max-width: 480px;
+  max-width: 380px;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    max-width: 480px;
+  } 
 }
 
 .number {

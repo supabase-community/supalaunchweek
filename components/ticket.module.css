@@ -60,6 +60,15 @@
   gap: 45px;
   margin: auto;
   padding: var(--space-4x);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .ticket-layout {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .ticket-share-layout {
