@@ -52,8 +52,11 @@
   /* text-transform: uppercase; */
   font-size: calc(20px * var(--size));
   line-height: 1.15;
-  color: var(--secondary-color);
-  
+  color: var(--secondary-color); 
+}
+
+.date-golden {
+  color: var(--gold-primary);
 }
 
 @media (min-width: 768px) {
@@ -89,6 +92,10 @@
   font-size: calc(20px * var(--size));
   line-height: 1.15;
   color: var(--secondary-color);
+}
+
+.url-golden {
+  color: var(--gold-primary);
 }
 
 @media (min-width: 768px) {

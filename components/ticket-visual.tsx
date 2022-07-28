@@ -23,6 +23,7 @@ import TicketNumber from './ticket-number';
 import TicketMono from './ticket-mono';
 import TicketInfo from './ticket-info';
 import TicketMonoMobile from './ticket-mono-mobile';
+import cn from 'classnames';
 
 type Props = {
   size?: number;
@@ -41,14 +42,17 @@ export default function TicketVisual({
   ticketGenerationState = 'default',
   golden = false
 }: Props) {
+  // golden = true;
   return (
     <>
       <div
-        className={[styles.visual, styles['visual--gold']].join(' ')}
+        className={[styles.visual, golden ? styles['visual--gold'] : ''].join(' ')}
         style={{ ['--size' as string]: size }}
       >
         <div className={styles['horizontal-ticket']}>
-          {username ? <TicketColored golden={golden} /> : <TicketMono golden={golden} />}
+          {/* {username ? <TicketColored golden={golden} /> : <TicketMono golden={golden} />} */}
+
+          <TicketMono golden={golden} />
         </div>
         <div className={styles['vertical-ticket']}>
           {username ? (
@@ -58,7 +62,9 @@ export default function TicketVisual({
           )}
         </div>
         <div className={styles.logo}>
-          <img src="/supabase-launch-week-5-logo.png" />
+          <img
+            src={golden ? '/supabase-launch-week-5-gold.svg' : '/supabase-launch-week-5-logo.png'}
+          />
         </div>
         <div className={styles.profile}>
           <TicketProfile
@@ -66,6 +72,7 @@ export default function TicketVisual({
             username={username}
             size={size}
             ticketGenerationState={ticketGenerationState}
+            golden={golden}
           />
         </div>
         <div className={styles.info}>
@@ -78,7 +85,9 @@ export default function TicketVisual({
         </div>
         {ticketNumber && (
           <div className={styles['ticket-number-wrapper']}>
-            <div className={styles['ticket-number']}>
+            <div
+              className={cn(styles['ticket-number'], { [styles['ticket-number-golden']]: golden })}
+            >
               <TicketNumber number={ticketNumber} />
             </div>
           </div>

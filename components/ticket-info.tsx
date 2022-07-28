@@ -17,6 +17,7 @@
 import styles from './ticket-info.module.css';
 import styleUtils from './utils.module.css';
 import Logo from './logo';
+import cn from 'classnames';
 import { DATE, SITE_URL } from '@lib/constants';
 import VercelLogo from '@components/icons/icon-platform';
 
@@ -40,11 +41,11 @@ export default function TicketInfo({
       {/* <div className={styles.logo}>
         <Logo textSecondaryColor={logoTextSecondaryColor} golden={golden} />
       </div> */}
-      <div className={styles.date}>
+      <div className={cn(styles.date, { [styles['date-golden']]: golden })}>
         <div>{DATE}</div>
       </div>
       {/* <div className={styleUtils['hide-on-mobile']}>{createdBy}</div> */}
-      <div className={styles.url}>{siteUrlForTicket}</div>
+      <div className={cn(styles.url, { [styles['url-golden']]: golden })}>{siteUrlForTicket}</div>
       {/* <div className={styleUtils['show-on-mobile']}>{createdBy}</div> */}
     </div>
   );

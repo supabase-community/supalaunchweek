@@ -69,7 +69,7 @@
 
 .ticket-visual {
   position: relative;
-  border-radius: var(--space-4x);
+  border-radius: calc(16px * var(--size));
   /* overflow: hidden; */
   width: 330px;
   margin: 0 auto;
@@ -157,6 +157,7 @@
 }
 
 .ticket-visual-wrapper {
+  border-radius: calc(16px * var(--size));
   width: 100%;
 }
 

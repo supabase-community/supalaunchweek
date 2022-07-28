@@ -27,10 +27,17 @@
 
 .visual--gold {
   background-color: gold;
+  /* border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-radius: 16px; */
+  background: linear-gradient(yellow, var(--gold-secondary));
   border-color: yellow;
-  /* filter: drop-shadow(2.45223px 8.5828px 73.5669px #FFBD14);  */
   animation: svg-shadow 2s ease-in-out infinite alternate;
+  /* filter: drop-shadow(2.45223px 8.5828px 73.5669px #FFBD14);  */
+  /* border-image-source: linear-gradient(to left, var(--gold-secondary), var(--gold-accent)); */
 }
+
 
 /* .svg-shadow {
 } */
@@ -149,6 +156,11 @@
   width: calc(330px * var(--size));
   text-align: center;
 }
+
+.ticket-number-golden {
+  color: var(--gold-secondary);
+}
+
 
 @media (min-width: 768px) {
   .ticket-number {

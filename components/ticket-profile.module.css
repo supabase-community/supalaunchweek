@@ -47,10 +47,13 @@
 .name {
   font-size: 24px;
   display: inline-block;
-  /* font-weight: bold; */
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0;
+}
+
+.name-golden {
+  color: var(--gold-primary);
 }
 
 @media (min-width: 768px) {
@@ -69,9 +72,19 @@
   margin: 0;
 }
 
+.username-golden {
+  color: var(--gold-secondary);
+}
+
+
 .githubIcon {
   margin-right: calc(5px * var(--size));
   display: inline-flex;
+}
+
+.githubIcon-golden svg {
+  color: var(--gold-secondary);
+  opacity: 0.5;
 }
 
 .empty-icon {

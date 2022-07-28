@@ -25,9 +25,16 @@ type Props = {
   username?: string;
   size?: number;
   ticketGenerationState: TicketGenerationState;
+  golden?: boolean;
 };
 
-export default function TicketProfile({ name, username, size = 1, ticketGenerationState }: Props) {
+export default function TicketProfile({
+  name,
+  username,
+  size = 1,
+  ticketGenerationState,
+  golden = false
+}: Props) {
   return (
     <div className={styles.profile}>
       <span
@@ -45,9 +52,11 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
       </span>
       <div className={styles.text}>
         <p
-          className={cn(styles.name, {
-            [styles['name-blank']]: !username
-          })}
+          className={cn(
+            styles.name,
+            { [styles['name-blank']]: !username },
+            { [styles['name-golden']]: golden }
+          )}
         >
           <span
             className={cn(styles.skeleton, styles.wrapper, {
@@ -57,13 +66,13 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
             {name || username || 'Your Name'}
           </span>
         </p>
-        <p className={styles.username}>
+        <p className={cn(styles.username, { [styles['username-golden']]: golden })}>
           <span
             className={cn(styles.skeleton, styles.wrapper, {
               [styles.show]: ticketGenerationState === 'loading'
             })}
           >
-            <span className={styles.githubIcon}>
+            <span className={cn(styles.githubIcon, { [styles['githubIcon-golden']]: golden })}>
               <GithubIcon color="var(--secondary-color)" size={20 * size} />
             </span>
             {username || <>username</>}

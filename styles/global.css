@@ -81,6 +81,10 @@
   --gray1: #222222;
   --error: #ea3323;
 
+  --gold-primary: rgb(128, 108, 0);
+  --gold-secondary: rgb(194, 165, 0);
+  --gold-accent: rgb(194, 165, 0);
+
   --foreground: #fff;
 
   --header-height: 72px;
@@ -369,4 +373,9 @@ input {
 
 .icon-btn:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.js-tilt-glare {
+  border-radius: calc(16px * var(--size));
 }
