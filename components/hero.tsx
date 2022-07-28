@@ -19,8 +19,11 @@ import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
 import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
 import Logo from './logo';
+import { useRouter } from 'next/router';
 
 export default function Hero() {
+  const router = useRouter();
+  const basePath = router.basePath;
   return (
     <div className={styles.wrapper}>
       {/* <img
@@ -36,7 +39,7 @@ export default function Hero() {
         <img src="/5-number.svg" style={{ width: '100%' }} />
       </div> */}
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.logo)}>
-        <img src="/supabase-launch-week-5.svg" style={{ width: '100%' }} />
+        <img src={`${basePath}/supabase-launch-week-5.svg`} style={{ width: '100%' }} />
       </div>
       <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.info)}>
         {/* <h1 className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.hero)}>

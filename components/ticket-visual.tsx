@@ -24,6 +24,7 @@ import TicketMono from './ticket-mono';
 import TicketInfo from './ticket-info';
 import TicketMonoMobile from './ticket-mono-mobile';
 import cn from 'classnames';
+import { useRouter } from 'next/router';
 
 type Props = {
   size?: number;
@@ -43,6 +44,9 @@ export default function TicketVisual({
   golden = false
 }: Props) {
   // golden = true;
+
+  const router = useRouter();
+  const basePath = router.basePath;
   return (
     <>
       <div
@@ -64,7 +68,11 @@ export default function TicketVisual({
         </div>
         <div className={styles.logo}>
           <img
-            src={golden ? '/supabase-launch-week-5-gold.svg' : '/supabase-launch-week-5-logo.png'}
+            src={
+              golden
+                ? `${basePath}/supabase-launch-week-5-gold.svg`
+                : `${basePath}/supabase-launch-week-5-logo.png`
+            }
           />
         </div>
         <div className={styles.profile}>
