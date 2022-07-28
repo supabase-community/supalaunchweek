@@ -47,7 +47,7 @@ export default function Hero() {
         {BRAND_NAME} Launch Week!
       </h1> */}
         <p>August 15 - 19</p>
-        <p>17:00 PT | 20:00 ET</p>
+        <p>8:00 PT | 11:00 ET</p>
       </div>
       {/* <h2
         className={cn(
