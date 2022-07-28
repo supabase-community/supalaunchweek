@@ -64,7 +64,7 @@
   padding-bottom: 64px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .ticket-layout {
     padding-top: 0;
     padding-bottom: 0;
