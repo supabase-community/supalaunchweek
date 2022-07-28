@@ -135,7 +135,13 @@ export default function Form({ sharePage, align = 'Center' }: Props) {
 
   return (
     <>
-      <div className={[styles.formInfo, styles[`formInfo${align}`]].join(' ')}>
+      <div
+        className={cn(
+          styleUtils.appear,
+          styleUtils['appear-fifth'],
+          [styles.formInfo, styles[`formInfo${align}`]].join(' ')
+        )}
+      >
         <h3>Get a ticket</h3>
         <p>
           A few of the lucky attendees will get a limited edition Supabase goodie bag. Make sure you
