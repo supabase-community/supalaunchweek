@@ -20,9 +20,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: black;
-  border: 2px solid #1e1e1e;
+  /* background-color: black; */
+  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .visual--gold {
@@ -31,8 +35,8 @@
   border-image-slice: 1;
   border-width: 2px;
   border-radius: 16px; */
-  background: linear-gradient(yellow, var(--gold-secondary));
-  border-color: yellow;
+  background: linear-gradient(#fff000, var(--gold-secondary));
+  border: 1px solid rgba(255, 255, 0, 0.629);
   animation: svg-shadow 2s ease-in-out infinite alternate;
   /* filter: drop-shadow(2.45223px 8.5828px 73.5669px #FFBD14);  */
   /* border-image-source: linear-gradient(to left, var(--gold-secondary), var(--gold-accent)); */
@@ -44,12 +48,12 @@
 
 @keyframes svg-shadow {
   from {
-    filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px #FFBD14) drop-shadow( 0 0 20px #FFBD14);
+    filter: drop-shadow( 0 0 5px #fff) drop-shadow( 0 0 15px var(--gold-primary)) drop-shadow( 0 0 20px var(--gold-accent));
   }
 
   to {
     
-    filter: drop-shadow( 0 0 20px #fff) drop-shadow( 0 0 10px #FFBD14) drop-shadow( 0 0 40px #FFBD14);
+    filter: drop-shadow( 0 0 20px #fff) drop-shadow( 0 0 10px var(--gold-accent)) drop-shadow( 0 0 40px var(--gold-primary));
   }
 }
 

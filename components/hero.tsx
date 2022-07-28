@@ -32,18 +32,18 @@ export default function Hero() {
           styles.heroImage
         )}
       /> */}
-      <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.number)}>
+      {/* <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.number)}>
         <img src="/5-number.svg" style={{ width: '100%' }} />
-      </div>
+      </div> */}
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.logo)}>
-        <img src="/supabase-launch-week.svg" style={{ width: '100%' }} />
+        <img src="/supabase-launch-week-5.svg" style={{ width: '100%' }} />
       </div>
       <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.info)}>
         {/* <h1 className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.hero)}>
         Welcome to the
         {BRAND_NAME} Launch Week!
       </h1> */}
-        <p>August 15</p>
+        <p>August 15 - 19</p>
         <p>17:00 PT | 20:00 ET</p>
       </div>
       {/* <h2
