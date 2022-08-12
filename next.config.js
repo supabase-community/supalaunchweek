@@ -15,7 +15,7 @@
  */
 
 module.exports = {
-  basePath: '/launch-week/register',
+  basePath: '/launch-week-register',
   images: {
     domains: [
       'www.datocms-assets.com',
