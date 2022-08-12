@@ -16,7 +16,7 @@
 import crypto from 'crypto';
 
 export async function register(email: string, token?: string) {
-  return await fetch('/launch-week/api/register', {
+  return await fetch('/launch-week-register/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export async function register(email: string, token?: string) {
 }
 
 export async function saveGithubToken({ id, token }: { id?: string; token: string }) {
-  return await fetch('/launch-week/api/save-github-token', {
+  return await fetch('/launch-week-register/api/save-github-token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -37,7 +37,7 @@ export default function TicketActions({ username, golden = false }: Props) {
   const text = encodeURIComponent(golden ? TWEET_TEXT_GOLDEN : TWEET_TEXT);
   const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=supabase&text=${text}`;
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${permalink}`;
-  const downloadUrl = `/launch-week/api/ticket-images/${username}`;
+  const downloadUrl = `/launch-week-register/api/ticket-images/${username}`;
 
   useEffect(() => {
     setImgReady(false);
